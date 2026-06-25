@@ -1,0 +1,17 @@
+def update_profile():
+    hero = {
+        "name": "Aris",
+        "hp": 100,
+        "gold": 50 
+    }
+    
+    hero["gold"] = 150
+    hero["hp"] = 70
+    hero["status"] = "Alive"
+    
+    print(f"Hero: {hero['name']}")
+    print(f"HP: {hero['hp']}")
+    print(f"Gold: {hero['gold']}")
+    print(f"Status: {hero['status']}")
+        
+update_profile()
