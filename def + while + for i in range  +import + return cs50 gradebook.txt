@@ -1,0 +1,33 @@
+import random  
+
+def cs50_gradebook():
+    students = [
+        {"name": "Alice", "score": 95},
+        {"name": "Bob", "score": 88}
+    ]
+    
+    while True:
+        print("1. View all students")
+        print("2. Add a new student")
+        print("3. Pick a student and exit")
+        
+        choice = input("Choose an option(1-3): ")
+        
+        if choice == "1":
+            for i in range(len(students)):
+                print(f"{i + 1}. Student: {students[i]['name']} - Score: {students[i]['score']}")
+                 elif choice == "2":
+            user_name = input("Give me the student's name: ")
+            user_score = int(input("Give me the student's score: "))
+            new_student = {"name": user_name, "score": user_score}
+            students.append(new_student)
+            print(f"{user_name} added successfully!")
+            
+        elif choice == "3":
+            chosen_dict = random.choice(students)
+            return chosen_dict["name"]
+        else:
+            print("Error! Try again.")
+        
+lucky_student = cs50_gradebook()
+print(f"The lucky student is: {lucky_student}")
